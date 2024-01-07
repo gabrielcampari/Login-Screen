@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
 body { 
     margin: 0; 
+    font-family: 'Dela Gothic One';
+}
+
+body * {
+    box-sizing: border-box;
 }
 
 .main-login{
@@ -20,8 +27,13 @@ body {
     flex-direction: column;
 }
 
-.left-login > h1 {
+.left-login > h2 {
+    font-size: 2.3vw;
     color: #c0d3d4; 
+}
+
+.left-image{
+    width:30vw; 
 }
 
 .righ-login{
@@ -33,12 +45,12 @@ body {
 }
 
 .card-login {
-    width: 60%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 30px 35px;
+    padding: 50px 70px;
     background: #30435e;
     border-radius: 20px;
     box-shadow: 0px 10px 40px #00000056;
@@ -51,6 +63,7 @@ body {
 }
 
 .textfield{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -75,4 +88,58 @@ body {
     color: #f0ffffde;
     margin-bottom: 10px;
 
+}
+
+.textfield > input::placeholder{
+    color: #f0ffff94; 
+}
+
+.btn-login{
+    width: 100%; 
+    padding: 16px 0px;
+    margin: 25px; 
+    border: none; 
+    border-radius: 8px;
+    outline: none; 
+    text-transform: uppercase;
+    font-weight: 800; 
+    letter-spacing: 3px;
+    color: #242f3d; 
+    background: #c0d3d4;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00a2ff52;
+}
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login {
+        flex-direction: column;
+    }
+    .left-login > h2{
+        display: none;
+    }
+
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .righ-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .left-image{
+        width: 65vw;
+        height: 35vh;
+    }
+
+    .card-login{
+        width: 100%; 
+    }
 }
